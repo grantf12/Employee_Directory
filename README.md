@@ -19,6 +19,8 @@ This application uses a variety of npms such as: axios, bootstrap, react, react-
   ## Usage:
 This app uses react, javascript, CSS and HTML to create a directory of employees to be able to search and filter through them.
 
+![webpage](https://user-images.githubusercontent.com/70180576/104380573-37853a00-54f9-11eb-8600-482194cd0f5e.jpg)
+
   ## License:
 This project is protected under MIT licensing.
 

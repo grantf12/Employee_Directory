@@ -7,3 +7,13 @@ html, body, #root {
   margin: 0;
   height: 100%;
 }
+table{
+  margin: auto
+}
+td{
+  padding: 15px;
+  border: 1px solid black
+}
+th{
+  padding: 15px;
+}

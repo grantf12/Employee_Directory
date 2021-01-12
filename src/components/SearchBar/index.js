@@ -3,18 +3,18 @@ import "./style.css";
 
 function SearchBar(props) {
 
+
   return (
-    <form>
-    <div className="form-group">
+    
+    <form className="form">
+    <div className="form-group col-3">
       <label htmlFor="search">Search: </label>
       <input
       onChange={props.handleInputChange}
-      value={props.search}
+      value={props.searchInput}
       name="search"
       type="text"
-      className="form-control"
       placeholder="Search by Name"
-      id="search"
       />
     </div>
     </form>

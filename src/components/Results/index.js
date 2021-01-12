@@ -4,9 +4,9 @@ import API from "../../utils/API";
 import ResultList from "../ResultList";
 
 
-class SearchResults extends React.Component {
+class Results extends React.Component {
     state = {
-        search: "",
+        searchInput: "",
         Emp: []
     };
 
@@ -21,41 +21,30 @@ class SearchResults extends React.Component {
     };
 
     handleInputChange = event => {
-        const name = event.target.name;
-        const value = event.target.value;
         this.setState({
-            [name]: value
+            searchInput : event.target.value
         });
+
+
     };
 
     render(){
+        const filteredEmp = (this.state.Emp).filter(employees => 
+            employees.name.first.toLowerCase().includes((this.state.searchInput).toLowerCase()));
+
         return (
            <div>
                <SearchBar
-               search={this.state.search}
+               searchInput={this.state.searchInput}
                handleInputChange={this.handleInputChange}
                />
                <ResultList
-               results = {this.state.Emp}
+               results = {filteredEmp}
                />
            </div>
         )
     }
 }
 
-// function NavBar() {
-// return (
-//     <table className="container-fluid">
-//         <th>Image</th>
-//         <th>Name</th>
-//         <th>Location</th>
-//         <tbody>
-//             <td>Image 1</td>
-//             <td>Name 1</td>
-//             <td>Location 1</td>
-//         </tbody>
-//     </table>
-// )
-// };
 
-export default SearchResults;
+export default Results;
